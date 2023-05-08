@@ -20,7 +20,7 @@ const VirtualListItem: FC<Props> = ({ itemKey, top, children, onVisible }) => {
     const { width = 0, height = 0 } =
       ref.current?.getBoundingClientRect() || {};
     onVisible(itemKey, { width, height });
-  }, [ref]);
+  }, [ref, itemKey, onVisible]);
 
   return (
     <div
